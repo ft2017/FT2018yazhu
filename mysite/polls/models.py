@@ -5,6 +5,7 @@ from django.db import models
 
 
 class Yazhu(models.Model):
+    # dev_datetime = models.DateTimeField('date published')
     work_date = models.DateField('date published')
     work_prod = models.CharField('产品',max_length=50, default='.')
     work_mach = models.CharField('机台',max_length=50, default='.')
