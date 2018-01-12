@@ -2,6 +2,7 @@
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<a class="btn btn-primary" href="http://portal.fulltech-metal.com">企業入口網站</a>
 <h1>FT2018压铸</h1>
 <h3>由张一翔维护，ip地址：<a href = 'http://10.10.0.111'>10.10.0.111</a></h3>
 <!-- {% if latest_question_list %}
@@ -21,11 +22,11 @@
 {% if Yazhu_list %}
  
         <table class = 'gridtable'>
-        <th>date</th><th>产品</th><th>机台</th><th>操作员</th><th>技术员</th><th>班组长</th><th>数量</th><th>良品数量</th><th>不良数量</th><th>不良率</th><th>欠铸</th><th>沙孔</th><th>气泡</th><th>拉伤</th><th>冲蚀</th><th>表面裂纹</th><th>顶针凹/凸</th><th>变形</th><th>毛刺</th><th>尺寸不良</th><th>其他</th>
+        <th>日期</th><th>产品</th><th>机台</th><th>操作员</th><th>技术员</th><th>班组长</th><th>数量</th><th>良品数量</th><th>不良数量</th><th>不良率</th><th>欠铸</th><th>沙孔</th><th>气泡</th><th>拉伤</th><th>冲蚀</th><th>表面裂纹</th><th>顶针凹/凸</th><th>变形</th><th>毛刺</th><th>尺寸不良</th><th>其他</th>
     {% for item in Yazhu_list %}
 <tr>
 <td>
-{{ item.work_date }}</td><td>
+{{ item.work_date | date:'Y-m-d '}}</td><td>
 {{ item.work_prod }}</td><td>
 {{ item.work_mach }}</td><td>
 {{ item.work_by }}</td><td>
