@@ -19,11 +19,10 @@
 
 
 {% if Yazhu_list %}
-    <ul>
+ 
         <table class = 'gridtable'>
         <th>date</th><th>产品</th><th>机台</th><th>操作员</th><th>技术员</th><th>班组长</th><th>数量</th><th>良品数量</th><th>不良数量</th><th>不良率</th><th>欠铸</th><th>沙孔</th><th>气泡</th><th>拉伤</th><th>冲蚀</th><th>表面裂纹</th><th>顶针凹/凸</th><th>变形</th><th>毛刺</th><th>尺寸不良</th><th>其他</th>
     {% for item in Yazhu_list %}
-
 <tr>
 <td>
 {{ item.work_date }}</td><td>
@@ -51,7 +50,7 @@
  
     {% endfor %}
       </table>
-    </ul>
+
 {% else %}
     <p>No Yazhu_list are available.</p>
 {% endif %}
