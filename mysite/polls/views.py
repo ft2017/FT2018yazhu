@@ -13,6 +13,10 @@ from .models import Choice, Question
 from .models import Yazhu
 
 
+
+
+
+
 # def index(request):
 #     return HttpResponse("<h1>中文</h1> Hello, world. You're at the polls index.")
 
@@ -30,11 +34,16 @@ from .models import Yazhu
 
 
 def index(request):
-    
+
     Yazhu_list = Yazhu.objects.order_by('work_date')[:12]
     context = {'Yazhu_list': Yazhu_list}
     return render(request, 'polls/index.html', context)
 
+
+def indexDev(request):
+    Yazhu_list = Yazhu.objects.order_by('work_date')[:12]
+    context = {'Yazhu_list': Yazhu_list}
+    return render(request, 'polls/indexDev.html', context)
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
