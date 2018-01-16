@@ -6,9 +6,11 @@ from django.db import models
 
 class Yazhu(models.Model):
     # dev_datetime = models.DateTimeField('date published')
+
     work_date = models.DateField('date published')
     work_prod = models.CharField('产品',max_length=50, default='.')
     work_mach = models.CharField('机台',max_length=50, default='.')
+    
     work_by = models.CharField('操作员',max_length=50, default='.')
     work_support = models.CharField('技术员',max_length=50, default='.')
     work_leader = models.CharField('班组长',max_length=50, default='.')
@@ -27,6 +29,8 @@ class Yazhu(models.Model):
     rej09=models.IntegerField('毛刺',default=0)
     rej10=models.IntegerField('尺寸不良',default=0)
     rej11=models.IntegerField('其他',default=0)
+
+
     def __str__(self):
         return self.work_mach
 

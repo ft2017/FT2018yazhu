@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
+
+TIME_ZONE = 'Asia/Shanghai'
+
+USE_TZ = True
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +29,7 @@ SECRET_KEY = 'e2!^*@-*1u^=8t$2vh_t1khiysa_jawqhp18sumf$9-f(a@5zv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.10.0.111','192.168.62.11','test2018-001-twoutlook.c9users.io']
+ALLOWED_HOSTS = ['10.10.0.111','192.168.62.21','test2018-001-twoutlook.c9users.io']
 
 
 # Application definition
