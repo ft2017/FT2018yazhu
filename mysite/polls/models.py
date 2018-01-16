@@ -9,7 +9,12 @@ class Yazhu(models.Model):
 
     work_date = models.DateField('date published')
     work_prod = models.CharField('产品',max_length=50, default='.')
-    work_mach = models.CharField('机台',max_length=50, default='.')
+    CATEGORY_CHOICES = (
+            ('1',u'机台1'),
+            ('2',u'机台2'),
+            ('3',u'机台3'),
+            )
+    work_mach = models.CharField('机台',max_length=50, choices = CATEGORY_CHOICES)
     
     work_by = models.CharField('操作员',max_length=50, default='.')
     work_support = models.CharField('技术员',max_length=50, default='.')
