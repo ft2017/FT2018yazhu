@@ -29,7 +29,7 @@ SECRET_KEY = 'e2!^*@-*1u^=8t$2vh_t1khiysa_jawqhp18sumf$9-f(a@5zv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.10.0.111','192.168.62.21','test2018-001-twoutlook.c9users.io']
+ALLOWED_HOSTS = ['10.10.0.111','192.168.62.15','127.0.0.1','test2018-001-twoutlook.c9users.io']
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     
 ]
 
