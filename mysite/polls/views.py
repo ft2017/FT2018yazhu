@@ -35,7 +35,7 @@ from .models import Yazhu
 
 def index(request):
 
-    Yazhu_list = Yazhu.objects.order_by('work_date')[:12]
+    Yazhu_list = Yazhu.objects.order_by('work_date')[:1200]
     context = {'Yazhu_list': Yazhu_list}
     return render(request, 'polls/index.html', context)
 
