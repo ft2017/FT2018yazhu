@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['10.10.0.111','192.168.62.15','127.0.0.1','test2018-001-twoutlo
 
 INSTALLED_APPS = [
     'polls',
+    'import_export',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
