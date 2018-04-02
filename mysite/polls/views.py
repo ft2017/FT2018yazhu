@@ -10,8 +10,8 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 
 from .models import Choice, Question
-from .models import Yazhu
-
+from .models import Yazhu,Information
+# from .models import Jitai
 
 
 
@@ -38,6 +38,12 @@ def index(request):
     Yazhu_list = Yazhu.objects.order_by('work_date')[:1200]
     context = {'Yazhu_list': Yazhu_list}
     return render(request, 'polls/index.html', context)
+
+
+def indexadv(request):
+    Yazhu_list = Yazhu.objects.order_by('work_date')[:1200]
+    context = {'Yazhu_list': Yazhu_list}
+    return render(request, 'polls/adv.html', context)
 
 
 def indexDev(request):
